@@ -1,0 +1,29 @@
+import { Injectable } from '@angular/core';
+import { Iusers } from '../model/users';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UsersService {
+  usersArray : Array<Iusers> = [
+    {
+      username: "Jhon",
+      id: 1
+    },
+    {
+      username: "July",
+      id: 2
+    },
+    {
+      username: "May",
+      id: 3
+    },
+  ]
+  constructor() { }
+  getAllUsers(){
+    return this.usersArray;
+  }
+  getUser(id:number){
+    return this.usersArray.find(user => user.id === id)
+  }
+}

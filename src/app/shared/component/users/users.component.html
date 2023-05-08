@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-sm-4">
+        <ul class="list-group">
+            <li class="list-group-item"
+            [routerLink]="['/users', user.id]"
+            *ngFor="let user of userData">
+                {{user.username}}
+            </li>
+        </ul>
+
+        <hr>
+        <button class="btn btn-primary" routerLink="/products">Go to Products</button>
+    </div>
+</div>
+
+<!-- Two types of routings
+
+1 Absolute >> routerLink = /products
+
+if we use / in segment it is called as abs path
+
+baseurl/products >> localhost:4200/products
+
+
+2 Relative >> routerLink = products 
+
+when we don't use / then it is relative path
+
+currentUrl/products >> http://localhost:4200/users/prodcuts
+
+-->
