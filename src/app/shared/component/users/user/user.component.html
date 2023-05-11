@@ -3,7 +3,10 @@
         <p>The Username is <strong>{{userObj.username}}</strong></p>
         <p>And the userid is <strong>{{userObj.id}}</strong></p>
         <hr>
-
-        <a [routerLink]="['/users', 3]">Load May</a>
+        <!-- <button class="btn btn-primary" [routerLink]="['/users', userObj.id, 'edit']">Edit User</button> -->
+        <button class="btn btn-primary"
+         (click)="goToEditUser()"
+         >Edit User</button>
+        <!-- <a [routerLink]="['/users', 3]">Load May</a> -->
     </div>
 </div>

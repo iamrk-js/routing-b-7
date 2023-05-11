@@ -11,17 +11,20 @@ export class ProductsService {
     {
       pname : "Samsung M31",
       pid : 1,
-      pstatus : "In Progress"
+      pstatus : "In Progress",
+      canReturn : 1
     },
     {
       pname : "Iphone",
       pid : 2,
-      pstatus : "Dispatched"
+      pstatus : "Dispatched",
+      canReturn : 1
     },
     {
       pname : "Macbook",
       pid : 3,
-      pstatus : "Delivered"
+      pstatus : "Delivered",
+      canReturn : 0
     }
   ]
   constructor() { }
@@ -32,5 +35,14 @@ export class ProductsService {
 
   getProduct(id : number): Iprodcut{
     return this.productsArray.find(prod => prod.pid === id)!
+  }
+
+  updateProd(prodObj : Iprodcut){
+    this.productsArray.forEach(prod => {
+      if(prodObj.pid === prod.pid){
+        prod.pname = prodObj.pname;
+        prod.pstatus = prodObj.pstatus;
+      }
+    })
   }
 }

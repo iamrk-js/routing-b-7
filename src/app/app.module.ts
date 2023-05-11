@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { UserComponent } from './shared/component/users/user/user.component';
 import { ProductComponent } from './shared/component/products/product/product.component';
 import { PageNotFoundComponent } from './shared/component/page-not-found/page-not-found.component';
+import { EditProductComponent } from './shared/component/products/edit-product/edit-product.component';
+import { EdituserComponent } from './shared/component/users/edituser/edituser.component';
 
 
 
@@ -23,7 +25,9 @@ import { PageNotFoundComponent } from './shared/component/page-not-found/page-no
     NavbarComponent,
     UserComponent,
     ProductComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    EditProductComponent,
+    EdituserComponent
   ],
   imports: [
     BrowserModule,

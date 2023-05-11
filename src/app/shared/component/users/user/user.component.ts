@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Iusers } from 'src/app/shared/model/users';
 import { UsersService } from 'src/app/shared/services/users.service';
 
@@ -13,6 +13,7 @@ export class UserComponent implements OnInit {
   userObj !: Iusers;
   constructor(
     private _route : ActivatedRoute,
+    private _router : Router,
     private _usersService : UsersService) { }
 
   ngOnInit(): void {
@@ -28,4 +29,8 @@ export class UserComponent implements OnInit {
 
   }
 
+  goToEditUser(){
+    // navigate to editUserComponent
+    this._router.navigate(['users', this.userId, 'edit'])
+  }
 }

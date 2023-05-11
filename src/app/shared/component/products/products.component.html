@@ -4,6 +4,7 @@
         <ul class="list-group">
             <li class="list-group-item"
             [routerLink]="['/products', prod.pid]"
+            [queryParams]="{canEdit : prod.canReturn}"
             *ngFor="let prod of productsData">
                 {{prod.pname}}
             </li>

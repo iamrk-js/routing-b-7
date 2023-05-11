@@ -4,6 +4,7 @@ export interface Iprodcut {
     pname: string;
     pid: number;
     pstatus: Tpstatus;
+    canReturn : 1 | 0
 }
 
 

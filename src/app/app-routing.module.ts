@@ -6,16 +6,18 @@ import { UsersComponent } from "./shared/component/users/users.component";
 import { UserComponent } from "./shared/component/users/user/user.component";
 import { ProductComponent } from "./shared/component/products/product/product.component";
 import { PageNotFoundComponent } from "./shared/component/page-not-found/page-not-found.component";
+import { EditProductComponent } from "./shared/component/products/edit-product/edit-product.component";
+import { EdituserComponent } from "./shared/component/users/edituser/edituser.component";
 
 
 const route: Routes = [
-    { path: '', component: DashboradComponent }, // localhost:4200/
+    { path: '', component: DashboradComponent },
     { path: 'users', component: UsersComponent }, // localhost:4200/users
     { path: 'users/:userId', component: UserComponent },
-    // { path: 'users/2', component: UserComponent },
-    // { path: 'users/3', component: UserComponent },
+    { path: 'users/:userId/edit', component: EdituserComponent },
     { path: 'products', component: ProductsComponent }, // localhost:4200/products
     { path: 'products/:productId', component: ProductComponent }, // localhost:4200/products
+    { path: "products/:productId/edit", component: EditProductComponent },
     { path: 'page-not-found', component: PageNotFoundComponent },
     { path: "**", redirectTo: 'page-not-found' }, // ** >> any route
 ]
